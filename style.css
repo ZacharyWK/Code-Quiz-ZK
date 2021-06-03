@@ -1,0 +1,76 @@
+:root{--carbon: #212121;--iron: #303030;--steel: #e0e0e0;--hot: #ff4500;}
+::selection{background-color: var(--steel); color: var(--iron);}
+
+.hid {display:none}
+.vis {display: flex;}
+
+html{scroll-behavior: smooth;
+    transition: all 0.7s ease-in-out;
+    font-family: sans-serif, Arial, Helvetica; color: var(--steel);
+    background-color: black;}
+
+a {text-decoration: none;color: var(--steel);}
+
+header, footer { 
+    padding: 2%;}
+
+
+
+body main, body h3, body h1, label, input
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#pressMe
+
+#startBtn,
+#enterBtn
+{
+    padding: 5%;
+    font-size: 300%;
+}
+
+#startBtn,
+#enterBtn,
+#a,#b,#c 
+{
+    opacity: 50%;
+    margin: 5%;
+    background-color: var(--carbon);
+    color: var(--steel);
+    border:3px solid var(--steel);
+    border-radius: 1.5% 1.5%;
+    padding: 1%;
+}
+
+
+#startBtn:hover,
+#enterBtn:hover,
+#a:hover,
+#b:hover,
+#c:hover 
+{opacity: 100%;}
+
+#startBtn:active,
+#enterBtn:active,
+#a:active,
+#b:active,
+#c:active 
+{
+    color: var(--hot);
+    box-shadow: 0 0 50px  var(--hot);
+    background-color: var(--iron);
+}
+
+#question {
+    background-color: var(--iron);
+    padding: 2%;
+}
+#answers {color: var(--steel);}
+#quiz {color: var(--steel);}
+#time {color: var(--steel);}
+.aa {color: var(--steel);}
+.bb {color: var(--steel);}
+.cc {color: var(--steel);}
