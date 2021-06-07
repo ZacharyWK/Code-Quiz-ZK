@@ -22,12 +22,12 @@ After entering their name the quiz will begin by presenting the first question, 
 When the quiz is over or the timer has reached 0 the users name and score will be shown.
 
 ## Links
-[REPOSITORY](link.com)
+[REPOSITORY](https://github.com/ZacharyWK/Code-Quiz-ZK)
 ```
-link.com
+https://github.com/ZacharyWK/Code-Quiz-ZK
 ```
 
-[DEPLOYED](link.com)
+[DEPLOYED](https://zacharywk.github.io/Code-Quiz-ZK/)
 ```
-link.com
+https://zacharywk.github.io/Code-Quiz-ZK/
 ```
