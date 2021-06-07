@@ -12,7 +12,7 @@
 
 
 <body>
-    <!-- <script type="text/javascript" src="./script.js"></script> -->
+    
 
     <!-- Start Button -->
     <main id="pressMe">
@@ -35,9 +35,9 @@
     </header>
 
     <main id="answers" class="hid">
-        <button id="a"  class="aa">A)</button>
-        <button id="b" onclick="b" class="bb">B)</button>
-        <button id="c" onclick="c" class="cc">C)</button>
+        <button id="a" class="aa">A</button>
+        <button id="b" onclick="b" class="bb">B</button>
+        <button id="c" onclick="c" class="cc">C</button>
     </main>
 
     <!-- Timer -->
@@ -51,14 +51,14 @@
     </main>
 
 
-
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
 
 
 
-<script> 
+<!-- <script> 
 
 const sb = document.querySelector("#startBtn");
 const lab = document.querySelector("#inputLable");
@@ -73,7 +73,7 @@ const c = document.querySelector("#c");
 const sco = document.querySelector("#score");
 const pla = document.querySelector("#place");
 
-let scoreLIST = [];
+let scoreLIST = JSON.parse(localStorage.getItem("LIST")) || [];
 let savedNAME = null;
 let savedPOINTS = null;
 let points = 0;
@@ -162,6 +162,7 @@ function loadIn() {
 
 // END
 function end() {
+    clearInterval(tim.value);
     EndPoints(); 
     score();
 
@@ -179,14 +180,16 @@ function end() {
 
     pla.classList.add("vis");
     
-    tim.textContent = 0;
+    // tim.textContent = 0;
 }
 
 
 // TIMER
 function startTimer() {
     tim.value = setInterval(function() {
-        if (tim.textContent == 0){end()}
+        if (tim.textContent == 0){
+            // clearInterval(tim.value), 
+            end()}
         else {tim.textContent--;}
         }, 1000)
     
@@ -219,8 +222,18 @@ c.onclick = function(e) {
 
 // SCORE
 function score() {
-    pla.textContent = localStorage.getItem("NAME") +" scored "+ localStorage.getItem("POINTS") +" "+ "Points";
+   console.log("SCORE")
+    let endScore = localStorage.getItem("NAME") +" scored "+ localStorage.getItem("POINTS") +" "+ "Points";
+    scoreLIST.push(endScore)
+    localStorage.setItem("LIST", JSON.stringify(scoreLIST));
+    scoreLIST = JSON.parse(localStorage.getItem("LIST")) ;   
+    pla.textContent = JSON.stringify(scoreLIST);
 };
+
+// function oldSCORES() {
+//     localStorage.setItem("LIST", scoreLIST);
+//     console.log(localStorage.getItem("NAME") )
+// }
 
 function EndPoints() {
     let timeScore = 0;
@@ -241,4 +254,5 @@ form.addEventListener("submit", function(e) {
     savedNAME = localStorage.setItem("NAME", name);
     enterName();
 })
-</script>
+</script> -->
+
