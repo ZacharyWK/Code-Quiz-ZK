@@ -28,20 +28,20 @@ body main, body h3, body h1, label, input
 #startBtn,
 #enterBtn
 {
-    padding: 5%;
-    font-size: 300%;
+    padding: 1.25%;
+    font-size: 100%;
 }
 
 #startBtn,
 #enterBtn,
 #a,#b,#c 
 {
-    opacity: 50%;
-    margin: 5%;
-    background-color: var(--carbon);
+    opacity: 100%;
+    margin: 2.5%;
+    background-color: var(--iron);
     color: var(--steel);
-    border:3px solid var(--steel);
-    border-radius: 1.5% 1.5%;
+    border:none;
+    /* border-radius: 1.5% 1.5%; */
     padding: 1%;
 }
 
@@ -51,7 +51,7 @@ body main, body h3, body h1, label, input
 #a:hover,
 #b:hover,
 #c:hover 
-{opacity: 100%;}
+{background-color: var(--carbon);}
 
 #startBtn:active,
 #enterBtn:active,
